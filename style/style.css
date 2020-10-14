@@ -1,0 +1,258 @@
+/*tinggal ubah warna dari teks nya aja kak di bagian teks */
+/*saran untuk font, semisal kurang sreg bisa cari-cari di (google font) lalu import */
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@font-face {
+	font-family:'Homestead-Display' ;
+	src: url("../font/Homestead-Display.ttf");
+}
+@font-face{
+	font-family: 'BLANCH_CAPS';
+	src:url("../font/BLANCH_CAPS.otf");
+}
+/* overflow y sengaja saya nonaktifkan agar tidak bisa scrol ke kanan, jika ingin di hilangkan juga gpp */
+
+body {
+	font-family: arial;
+	overflow-y: none;
+	background-color: #200001;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(170, 92, 2);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+  font-family: "Homestead-Display";
+
+}
+
+.header-logo {
+  width: 100px;
+  margin-top: 15px;
+  color: white;
+  font-size: 25px;
+}
+
+.header-left {float: left;}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.header-right a:hover {background-color: rgba(255, 255, 255, 0.3);}
+.clear {clear: left;}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*.container-top {
+  padding-top:25%;
+}*/
+
+.top-wrapper {
+  /*width: 100%;
+  height:650px;*/
+  padding: 180px 0 190px 0;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-family: "Homestead-Display";
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.top-wrapper p {opacity: 0.7;margin-bottom: 3px;}
+
+
+
+
+
+
+
+
+/*main*/
+.main {
+  transition: .3s;
+	width: 100%;
+	margin:80px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/*bagiain pembungkun dari img dan teks */
+.card {
+	display: flex;
+	width: 80%;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+	position: relative;
+}
+.bagian2 {flex-flow: row-reverse;text-align: right;}
+.bagian3 {margin-bottom: 100px;}
+
+/*bagian teks*/
+.card .teks {
+	width: 50%;
+	margin:0 30px;
+	color: #eee;
+	align-self: flex-end;
+	padding-bottom: 15px;
+}
+
+/*Teks header */
+.card .teks h1 {
+	margin-bottom: 10px;
+	font-family: 'Homestead-Display';
+	letter-spacing: 3px;
+	font-size: 35px;
+}
+
+/*teks deskripsi*/
+.card .teks p {line-height: 22px;margin-bottom:10px ; color; }
+.teks p, .teks a {font-size: 27px;font-family: 'BLANCH_CAPS';}
+/*yang readmore*/
+/*untuk animasinya juga bisa di tempelin disini*/
+.card .teks a {text-decoration: none;color: orange;}
+.card .teks a:hover {color: #aeaeae;}
+
+/*bagian gambar/img */
+/*gambarnya di kasih radius sedikit kalo enggak sreg bisa hapus aja */
+.card .img {
+	width: 30%;
+	height: 395px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+  transition: .3s;
+}
+.card .img:hover {filter:grayscale(1);cursor: pointer;}
+/*bagian import gambar*/
+.bagian1 .img{background-image: url("../img/gunungBatur.jpeg");}
+.bagian2 .img{background-image: url("../img/gunungBromo.jpeg");}
+.bagian3 .img{background-image: url("../img/gunungRinjani.jpeg");}
+
+
+
+
+
+/*bagian main*/
+.lesson-wrapper{
+  /*padding: 5px 5px;*/
+  background-color: rgb(255, 94, 0);
+  text-align: center;
+  width: 100%;
+}
+
+.lessons{
+  width: 100%;
+  height: 150px;
+}
+
+.lesson-icon{
+  display: inline-block;
+  margin:50px;
+  color: white;
+}
+
+.box{
+  cursor: pointer;
+  width: 250px;
+  height: 150px;
+  border: 10px #ffffff solid;
+  padding: 5px;
+  background-color: orange;
+  box-shadow: 28px 15px rgb(170, 92, 2);
+  margin-top:-70px; 
+}
+
+.lesson-icon p{
+  font-size: 45px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Homestead-Display";
+}
+
+.color-bottom{
+  padding: 100px 100px;
+  margin-top: -100px;
+  background-color: orange;
+}
+
+
+/*/*footer*/
+footer {
+  background-color: rgb(170, 92, 2);
+  color: #fff;
+  height: 120px;
+  padding: 40px;
+  font-family: "Homestead-Display";
+}
+
+footer p1 {
+  color: #b3aeb5;
+  font-size: 24px;
+  float: left;
+}
+
+footer p2 {
+  color: #b3aeb5;
+  font-size: 24px;
+  float: right;
+}
+
+footer ul {
+  text-align: center;
+  display: inline-block;
+}
+
+footer ul li {
+  list-style: none;
+  padding: 3px 15px;
+  float: left;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
